@@ -1,0 +1,160 @@
+Script started on Saturday 09 November 2019 08:39:42 AM IST
+]0;team9@nvidia-DGX-Station: ~/17IT208/SQLNet[01;32mteam9@nvidia-DGX-Station[00m:[01;34m~/17IT208/SQLNet[00m$ python train.py --baseline --dataset 1
+Loading from re-split dataset
+Loading data from data_resplit/train.jsonl
+Loading data from data_resplit/tables.jsonl
+Loading data from data_resplit/dev.jsonl
+Loading data from data_resplit/tables.jsonl
+Loading data from data_resplit/test.jsonl
+Loading data from data_resplit/tables.jsonl
+Loading word embedding from glove/glove.42B.300d.txt
+Using fixed embedding
+Not using column attention on aggregator predicting
+Not using column attention on selection predicting
+Seq2SQL where prediction
+/home/team9/17IT208/SQLNet/sqlnet/model/modules/aggregator_predict.py:55: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  att = self.softmax(att_val)
+/home/team9/17IT208/SQLNet/sqlnet/model/modules/selection_predict.py:55: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  att = self.softmax(att_val)
+Init dev acc_qm: 0.0
+  breakdown on (agg, sel, where): [0.02808622 0.16884389 0.        ]
+Epoch 1 @ 2019-11-09 08:44:42.820822
+ Loss = 3.4072238801550894
+ Train acc_qm: 0.0867505860441
+   breakdown result: [0.89560387 0.45953887 0.20164735]
+ Dev acc_qm: 0.0716851730895
+   breakdown result: [0.91557805 0.42423253 0.17031352]
+ Best val acc = (0.9155780535597648, 0.4242325277596342, 0.1703135205747877), on epoch (1, 1, 1) individually
+Epoch 2 @ 2019-11-09 08:51:23.762573
+ Loss = 2.1997851442576395
+ Train acc_qm: 0.234321312739
+   breakdown result: [0.90006744 0.73258726 0.32810443]
+ Dev acc_qm: 0.19480731548
+   breakdown result: [0.91819073 0.68190725 0.27596342]
+ Best val acc = (0.9181907250163291, 0.681907250163292, 0.2759634225996081), on epoch (2, 2, 2) individually
+Epoch 3 @ 2019-11-09 08:58:09.790913
+ Loss = 1.6982294746547884
+ Train acc_qm: 0.307681191998
+   breakdown result: [0.90689124 0.81508301 0.38897274]
+ Dev acc_qm: 0.256041802743
+   breakdown result: [0.9206401  0.76159373 0.33556499]
+ Best val acc = (0.9206401045068583, 0.7615937295885042, 0.33556499020248204), on epoch (3, 3, 3) individually
+Epoch 4 @ 2019-11-09 09:05:36.444712
+ Loss = 1.4582906340263446
+ Train acc_qm: 0.356362994124
+   breakdown result: [0.91010244 0.84905751 0.43683568]
+ Dev acc_qm: 0.29490529066
+   breakdown result: [0.92374265 0.79033312 0.37410189]
+ Best val acc = (0.9237426518615284, 0.790333115610712, 0.374101894186806), on epoch (4, 4, 4) individually
+Epoch 5 @ 2019-11-09 09:12:43.046686
+ Loss = 1.3051024347611664
+ Train acc_qm: 0.407854596834
+   breakdown result: [0.9132173  0.8773803  0.48786166]
+ Dev acc_qm: 0.336054866101
+   breakdown result: [0.9167211  0.8211953  0.41557805]
+ Best val acc = (0.9237426518615284, 0.8211952971913782, 0.41557805355976485), on epoch (4, 5, 5) individually
+Epoch 6 @ 2019-11-09 09:20:07.415044
+ Loss = 1.1936376938213982
+ Train acc_qm: 0.447769821136
+   breakdown result: [0.92179121 0.89139719 0.52501525]
+ Dev acc_qm: 0.3620182887
+   breakdown result: [0.91688439 0.83344219 0.44203135]
+ Best val acc = (0.9237426518615284, 0.8334421946440235, 0.4420313520574788), on epoch (4, 6, 6) individually
+Epoch 7 @ 2019-11-09 09:28:19.988087
+ Loss = 1.1021068045707196
+ Train acc_qm: 0.47341125847
+   breakdown result: [0.92768376 0.90234739 0.54657847]
+ Dev acc_qm: 0.379000653168
+   breakdown result: [0.91770085 0.84111692 0.45770738]
+ Best val acc = (0.9237426518615284, 0.8411169170476812, 0.4577073807968648), on epoch (4, 7, 7) individually
+Epoch 8 @ 2019-11-09 09:40:25.052823
+ Loss = 1.0252723584288879
+ Train acc_qm: 0.496307119232
+   breakdown result: [0.93598471 0.91390771 0.56399923]
+ Dev acc_qm: 0.388471587198
+   breakdown result: [0.9167211  0.85026127 0.46995428]
+ Best val acc = (0.9237426518615284, 0.8502612671456564, 0.46995427824951014), on epoch (4, 8, 8) individually
+Epoch 9 @ 2019-11-09 09:51:07.364908
+ Loss = 0.9551247645770381
+ Train acc_qm: 0.52543270929
+   breakdown result: [0.93988632 0.92355737 0.58962461]
+ Dev acc_qm: 0.40937295885
+   breakdown result: [0.91329197 0.85516003 0.4918354 ]
+ Best val acc = (0.9237426518615284, 0.8551600261267146, 0.4918354016982365), on epoch (4, 9, 9) individually
+Epoch 10 @ 2019-11-09 10:01:08.043240
+ Loss = 0.8982121047209248
+ Train acc_qm: 0.54966121833
+   breakdown result: [0.94722392 0.92659195 0.61252047]
+ Dev acc_qm: 0.421946440235
+   breakdown result: [0.9145983  0.85875245 0.50244938]
+ Best val acc = (0.9237426518615284, 0.8587524493794906, 0.502449379490529), on epoch (4, 10, 10) individually
+Epoch 11 @ 2019-11-09 10:12:31.710643
+ Loss = 0.8446621715224343
+ Train acc_qm: 0.574756751549
+   breakdown result: [0.95138242 0.93261295 0.63570534]
+ Dev acc_qm: 0.431254082299
+   breakdown result: [0.91378184 0.85907903 0.51796212]
+ Best val acc = (0.9237426518615284, 0.8590790333115611, 0.5179621162638798), on epoch (4, 11, 11) individually
+Epoch 12 @ 2019-11-09 10:21:17.257323
+ Loss = 0.8044603458652032
+ Train acc_qm: 0.586830866061
+   breakdown result: [0.95863974 0.938072   0.64220802]
+ Dev acc_qm: 0.440888308295
+   breakdown result: [0.91427172 0.86887655 0.52220771]
+ Best val acc = (0.9237426518615284, 0.8688765512736774, 0.5222077073807969), on epoch (4, 12, 12) individually
+Epoch 13 @ 2019-11-09 10:31:06.485615
+ Loss = 0.75867893352283
+ Train acc_qm: 0.604813589801
+   breakdown result: [0.96177066 0.94372371 0.65661026]
+ Dev acc_qm: 0.448073154801
+   breakdown result: [0.91133246 0.8700196  0.53135206]
+ Best val acc = (0.9237426518615284, 0.8700195950359242, 0.531352057478772), on epoch (4, 13, 13) individually
+Epoch 14 @ 2019-11-09 10:39:35.370292
+ Loss = 0.7219474191222132
+ Train acc_qm: 0.620660865097
+   breakdown result: [0.96793616 0.9450403  0.66829903]
+ Dev acc_qm: 0.454931417374
+   breakdown result: [0.90953625 0.8698563  0.54327237]
+ Best val acc = (0.9237426518615284, 0.8700195950359242, 0.5432723709993469), on epoch (4, 13, 14) individually
+Epoch 15 @ 2019-11-09 10:48:53.465326
+ Loss = 0.690381247365426
+ Train acc_qm: 0.633762563823
+   breakdown result: [0.97313831 0.94961626 0.67826981]
+ Dev acc_qm: 0.460483344219
+   breakdown result: [0.91035271 0.87344873 0.55062051]
+ Best val acc = (0.9237426518615284, 0.8734487263226649, 0.550620509470934), on epoch (4, 15, 15) individually
+Epoch 16 @ 2019-11-09 10:57:17.680977
+ Loss = 0.6555450428853256
+ Train acc_qm: 0.647121158601
+   breakdown result: [0.97607656 0.95228156 0.68836903]
+ Dev acc_qm: 0.462606139778
+   breakdown result: [0.91198563 0.87328543 0.55111039]
+ Best val acc = (0.9237426518615284, 0.8734487263226649, 0.5511103853690399), on epoch (4, 15, 16) individually
+Epoch 17 @ 2019-11-09 11:06:48.752194
+ Loss = 0.6313380494401318
+ Train acc_qm: 0.657702064802
+   breakdown result: [0.97925564 0.95465785 0.69612408]
+ Dev acc_qm: 0.468974526453
+   breakdown result: [0.90512737 0.8799804  0.55829523]
+ Best val acc = (0.9237426518615284, 0.8799804049640758, 0.5582952318745917), on epoch (4, 17, 17) individually
+Epoch 18 @ 2019-11-09 11:15:21.092188
+ Loss = 0.6077529204297144
+ Train acc_qm: 0.658424584952
+   breakdown result: [0.97750554 0.95923381 0.69581902]
+ Dev acc_qm: 0.463912475506
+   breakdown result: [0.89957544 0.87508165 0.5569889 ]
+ Best val acc = (0.9237426518615284, 0.8799804049640758, 0.5582952318745917), on epoch (4, 17, 17) individually
+Epoch 19 @ 2019-11-09 11:24:17.966761
+ Loss = 0.5854030084485191
+ Train acc_qm: 0.67889598921
+   breakdown result: [0.98301275 0.96043801 0.71288655]
+ Dev acc_qm: 0.474363161332
+   breakdown result: [0.90986283 0.87589811 0.56694971]
+ Best val acc = (0.9237426518615284, 0.8799804049640758, 0.5669497060744612), on epoch (4, 17, 19) individually
+Epoch 20 @ 2019-11-09 11:33:23.622059
+ Loss = 0.5638559926035072
+ Train acc_qm: 0.688770431264
+   breakdown result: [0.98211361 0.96233262 0.72324267]
+ Dev acc_qm: 0.485467015023
+   breakdown result: [0.91329197 0.87573481 0.57086871]
+ 

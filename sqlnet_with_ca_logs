@@ -1,0 +1,41 @@
+Script started on Saturday 09 November 2019 08:29:11 AM IST
+]0;team9@nvidia-DGX-Station: ~/17IT208/SQLNet[01;32mteam9@nvidia-DGX-Station[00m:[01;34m~/17IT208/SQLNet[00m$ exitpython test.py --ca
+Loading from original dataset
+Loading data from data/train_tok.jsonl
+Loading data from data/train_tok.tables.jsonl
+Loading data from data/dev_tok.jsonl
+Loading data from data/dev_tok.tables.jsonl
+Loading data from data/test_tok.jsonl
+Loading data from data/test_tok.tables.jsonl
+Load used word embedding
+Using trainable embedding
+Using trainable embedding
+Using trainable embedding
+Using column attention on aggregator predicting
+Using column attention on selection predicting
+Using column attention on where predicting
+Loading from saved_model/old_sqlnet_ca.agg_model
+Loading from saved_model/old_sqlnet_ca.sel_model
+Loading from saved_model/old_sqlnet_ca.cond_model
+/home/team9/17IT208/SQLNet/sqlnet/model/modules/aggregator_predict.py:55: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  att = self.softmax(att_val)
+/home/team9/17IT208/SQLNet/sqlnet/model/modules/selection_predict.py:46: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  att = self.softmax(att_val.view((-1, max_x_len))).view(
+/home/team9/17IT208/SQLNet/sqlnet/model/modules/sqlnet_condition_predict.py:123: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  num_col_att = self.softmax(num_col_att_val)
+/home/team9/17IT208/SQLNet/sqlnet/model/modules/sqlnet_condition_predict.py:138: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  num_att = self.softmax(num_att_val)
+/home/team9/17IT208/SQLNet/sqlnet/model/modules/sqlnet_condition_predict.py:156: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  (-1, max_x_len))).view(B, -1, max_x_len)
+/home/team9/17IT208/SQLNet/sqlnet/model/modules/sqlnet_condition_predict.py:202: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  op_att = self.softmax(op_att_val.view(B*4, -1)).view(B, 4, -1)
+Dev acc_qm: 0.536159600998;
+  breakdown on (agg, sel, where): [0.89834936 0.9035744  0.63484147]
+Dev execution acc: 0.61322883268
+Test acc_qm: 0.525318050132;
+  breakdown on (agg, sel, where): [0.89960952 0.89822396 0.62312634]
+Test execution acc: 0.603602468825
+]0;team9@nvidia-DGX-Station: ~/17IT208/SQLNet[01;32mteam9@nvidia-DGX-Station[00m:[01;34m~/17IT208/SQLNet[00m$ exit
+exit
+
+Script done on Saturday 09 November 2019 08:35:04 AM IST
