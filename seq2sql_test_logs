@@ -1,0 +1,33 @@
+Script started on Saturday 09 November 2019 02:08:46 PM IST
+]0;team9@nvidia-DGX-Station: ~/17IT208/SQLNet[01;32mteam9@nvidia-DGX-Station[00m:[01;34m~/17IT208/SQLNet[00m$ python train.py --baseline --dataset 1[Kpython test.py --baseline --dataset 1
+Loading from re-split dataset
+Loading data from data_resplit/train.jsonl
+Loading data from data_resplit/tables.jsonl
+Loading data from data_resplit/dev.jsonl
+Loading data from data_resplit/tables.jsonl
+Loading data from data_resplit/test.jsonl
+Loading data from data_resplit/tables.jsonl
+Load used word embedding
+Using trainable embedding
+Using trainable embedding
+Using trainable embedding
+Not using column attention on aggregator predicting
+Not using column attention on selection predicting
+Seq2SQL where prediction
+Loading from saved_model/new_seq2sql.agg_model
+Loading from saved_model/new_seq2sql.sel_model
+Loading from saved_model/new_seq2sql.cond_model
+/home/team9/17IT208/SQLNet/sqlnet/model/modules/aggregator_predict.py:55: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  att = self.softmax(att_val)
+/home/team9/17IT208/SQLNet/sqlnet/model/modules/selection_predict.py:55: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  att = self.softmax(att_val)
+Dev acc_qm: 0.498856956238;
+  breakdown on (agg, sel, where): [0.92374265 0.88667538 0.58099282]
+Dev execution acc: 0.577726975833
+Test acc_qm: 0.499836708034;
+  breakdown on (agg, sel, where): [0.92039517 0.88708361 0.58368713]
+Test execution acc: 0.581074461137
+]0;team9@nvidia-DGX-Station: ~/17IT208/SQLNet[01;32mteam9@nvidia-DGX-Station[00m:[01;34m~/17IT208/SQLNet[00m$ exit
+exit
+
+Script done on Saturday 09 November 2019 02:19:26 PM IST
